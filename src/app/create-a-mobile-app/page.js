@@ -23,13 +23,7 @@ import NewFaqslp from "../../components/NewFaqslp";
 import HomeLocationlp from "../../components/HomeLocationlp";
 
 export default function gamedevelopmentcompany() {
-  const [showFolds, setShowFolds] = useState(false);
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowFolds(true);
-    }, 2000);
-    return () => clearTimeout(timeout);
-  }, []);
+ 
   return (
     <>
       <Bannerlp6
@@ -49,7 +43,9 @@ export default function gamedevelopmentcompany() {
         }
         newHomeBgprops="newHomeBg"
       />
-     
+      <People People="people" />
+      <HomeBannerSliderlp />
+      
     </>
   );
 }
