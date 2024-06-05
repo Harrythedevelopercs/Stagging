@@ -55,7 +55,7 @@ export default function gamedevelopmentcompany() {
         title="Explore Our App Development Journey"
         desc="We believe in efficiency without compromising quality. Our streamlined process for app development is <br /> designed to be transparent and collaborative, ensuring your vision comes to life exactly as you imagined."
       />
-      <LpChoose transform="transformlp" />
+      {/* <LpChoose transform="transformlp" /> */}
       {/* <Technologieslp /> */}
       {/* <Justbuilditlp
         title={
@@ -71,8 +71,8 @@ export default function gamedevelopmentcompany() {
           </>
         }
         slide="slide1lp"
-      />
-      <Globallplp6 />
+      /> */}
+      {/* <Globallplp6 />
       <Partnerships />
       <Formnewlp />
       <NewFaqslp />
