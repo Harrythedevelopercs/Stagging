@@ -45,6 +45,8 @@ export default function gamedevelopmentcompany() {
       />
       <People People="people" />
       <HomeBannerSliderlp />
+      <LpForm6 />
+      <Nothing Nothing="nothingLp6" />
       
     </>
   );
