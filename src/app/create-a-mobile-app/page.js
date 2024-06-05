@@ -47,7 +47,8 @@ export default function gamedevelopmentcompany() {
       <HomeBannerSliderlp />
       <LpForm6 />
       <Nothing Nothing="nothingLp6" />
-      
+      <NewMaintain6Lp />
+     
     </>
   );
 }
