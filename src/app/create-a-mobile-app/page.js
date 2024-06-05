@@ -72,8 +72,8 @@ export default function gamedevelopmentcompany() {
         }
         slide="slide1lp"
       /> */}
-      {/* <Globallplp6 />
-      <Partnerships />
+      <Globallplp6 />
+      {/* <Partnerships />
       <Formnewlp />
       <NewFaqslp />
       <HomeLocationlp /> */}
