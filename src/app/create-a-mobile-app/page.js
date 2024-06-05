@@ -56,7 +56,7 @@ export default function gamedevelopmentcompany() {
         desc="We believe in efficiency without compromising quality. Our streamlined process for app development is <br /> designed to be transparent and collaborative, ensuring your vision comes to life exactly as you imagined."
       />
       <LpChoose transform="transformlp" />
-      <Technologieslp />
+      {/* <Technologieslp /> */}
       {/* <Justbuilditlp
         title={
           <>
