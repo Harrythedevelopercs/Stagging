@@ -2,9 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Col, Row } from 'react-bootstrap'
 import styles from "@/styles/DubaiBrandTrust.module.css"
-// Swiper
-import { register } from 'swiper/element/bundle';
-import 'swiper/css';
+
+
 // Images
 import BrandOne from "media/newdubai/single-brands.png"
 import BrandTwo from "media/newdubai/single-brands1.png"
@@ -26,31 +25,7 @@ const DubaiBrandTrust = () => {
         pauseOnHover: true
     };
 
-    // const swiperRef = useRef(null);
-    // useEffect(() => {
-    //     register();
-    //     const params = {
-    //         slidesPerView: 6,
-    //         breakpoints: {
-    //             300: {
-    //                 slidesPerView: 2, 
-    //             },
-    //             768: {
-    //                 slidesPerView: 3, 
-    //             },
-    //             1024: {
-    //                 slidesPerView: 4, 
-    //             },
-    //             1300: {
-    //                 slidesPerView: 5, 
-    //             },
-    //         },
-    //     };
-    //     // Assign it to swiper element
-    //     Object.assign(swiperRef.current, params);
-    //     // initialize swiper
-    //     swiperRef.current.initialize();
-    // }, []);
+
     return (
         <>
             <section className={styles.brandTrustSec}>
