@@ -4,6 +4,7 @@ import "@/styles/globals.css";
 //===== Import Components =====
 import Scripts from "./Scripts";
 import ConditionalLayout from "./ConditionalLayout";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 //===== Meta Data =====
 export const metadata = {
   metadataBase: new URL('https://www.bitswits.co'),
@@ -54,6 +55,7 @@ export default function RootLayout({ children }) {
         <ConditionalLayout>
           <main>{children}</main>
         </ConditionalLayout>
+        <SpeedInsights/>
       </body>
     </html>
   );
