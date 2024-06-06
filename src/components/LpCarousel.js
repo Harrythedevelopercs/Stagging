@@ -2,19 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import styles from '../../styles/LpCarousel.module.css'
 //
-import scr1 from '/public/images/lp-carousel/1.png';
-import scr2 from '/public/images/lp-carousel/2.png';
-import scr3 from '/public/images/lp-carousel/3.png';
-import scr4 from '/public/images/lp-carousel/4.png';
-import scr5 from '/public/images/lp-carousel/5.png';
-import scr6 from '/public/images/lp-carousel/6.png';
-import scr7 from '/public/images/lp-carousel/7.png';
-import scr8 from '/public/images/lp-carousel/8.png';
-import scr9 from '/public/images/lp-carousel/9.png';
-import scr10 from '/public/images/lp-carousel/10.png';
-import scr11 from '/public/images/lp-carousel/11.png';
-import scr12 from '/public/images/lp-carousel/12.png';
-import scr13 from '/public/images/lp-carousel/13.png';
+import scr1 from '/public/images/lp-carousel/1.webp';
+import scr2 from '/public/images/lp-carousel/2.webp';
+import scr3 from '/public/images/lp-carousel/3.webp';
+import scr4 from '/public/images/lp-carousel/4.webp';
+import scr5 from '/public/images/lp-carousel/5.webp';
+import scr6 from '/public/images/lp-carousel/6.webp';
+import scr7 from '/public/images/lp-carousel/7.webp';
+import scr8 from '/public/images/lp-carousel/8.webp';
+import scr9 from '/public/images/lp-carousel/9.webp';
+import scr10 from '/public/images/lp-carousel/10.webp';
+import scr11 from '/public/images/lp-carousel/11.webp';
+import scr12 from '/public/images/lp-carousel/12.webp';
+import scr13 from '/public/images/lp-carousel/13.webp';
 
 
 const Carousel = () => {
