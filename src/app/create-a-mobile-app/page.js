@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 // CSS 
 import styles from "@/styles/bannerlp6.module.css";
 import stylesjust from "@/styles/Justbuilditlp.module.css";
@@ -23,6 +23,7 @@ import NewFaqslp from "../../components/NewFaqslp";
 import HomeLocationlp from "../../components/HomeLocationlp";
 
 export default function gamedevelopmentcompany() {
+  const [showComponents, setShowComponents] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -33,8 +34,14 @@ export default function gamedevelopmentcompany() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
+    // Show components after 3 seconds
+    const timer = setTimeout(() => {
+      setShowComponents(true);
+    }, 3000);
+
     return () => {
       window.removeEventListener("resize", checkMobile);
+      clearTimeout(timer);
     };
   }, []);
 
@@ -55,7 +62,7 @@ export default function gamedevelopmentcompany() {
       />
       <People People="people" />
 
-      {isMobile ? (
+      {showComponents && isMobile && (
         <>
           <HomeBannerSliderlp />
           <LpForm6 />
@@ -91,7 +98,9 @@ export default function gamedevelopmentcompany() {
           <NewFaqslp />
           <HomeLocationlp />
         </>
-      ) : (
+      )}
+
+      {showComponents && !isMobile && (
         <>
           <HomeBannerSliderlp />
           <LpForm6 />
