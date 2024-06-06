@@ -37,7 +37,7 @@ export default function gamedevelopmentcompany() {
     // Show mobile components after 3 seconds
     const timer = setTimeout(() => {
       setShowMobileComponents(true);
-    }, 3000);
+    }, 4000);
 
     return () => {
       window.removeEventListener("resize", checkMobile);
