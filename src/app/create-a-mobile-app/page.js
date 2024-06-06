@@ -67,11 +67,12 @@ export default function gamedevelopmentcompany() {
         }
         newHomeBgprops="newHomeBg"
       />
-      <People People="people" />
+     
       
       {isMobile ? (
         showMobileComponents && (
           <>
+           <People People="people" />
             <HomeBannerSliderlp />
             <LpForm6 />
             <Nothing Nothing="nothingLp6" />
@@ -109,6 +110,7 @@ export default function gamedevelopmentcompany() {
         )
       ) : (
         <>
+          <People People="people" />
           <HomeBannerSliderlp />
           <LpForm6 />
           <Nothing Nothing="nothingLp6" />
