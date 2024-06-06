@@ -23,7 +23,7 @@ import NewFaqslp from "../../components/NewFaqslp";
 import HomeLocationlp from "../../components/HomeLocationlp";
 
 export default function gamedevelopmentcompany() {
-  const [showComponents, setShowComponents] = useState(false);
+  const [showMobileComponents, setShowMobileComponents] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -34,9 +34,9 @@ export default function gamedevelopmentcompany() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    // Show components after 3 seconds
+    // Show mobile components after 3 seconds
     const timer = setTimeout(() => {
-      setShowComponents(true);
+      setShowMobileComponents(true);
     }, 3000);
 
     return () => {
@@ -61,46 +61,46 @@ export default function gamedevelopmentcompany() {
         newHomeBgprops="newHomeBg"
       />
       <People People="people" />
-
-      {showComponents && isMobile && (
-        <>
-          <HomeBannerSliderlp />
-          <LpForm6 />
-          <Nothing Nothing="nothingLp6" />
-          <NewMaintain6Lp />
-          <WeworkLp wework="weworkLpnewhomefy" />
-          <StartupsLp startups="startups" />
-          <ProjectProcess
-            processclass="processLp6"
-            title="Explore Our App Development Journey"
-            desc="We believe in efficiency without compromising quality. Our streamlined process for app development is <br /> designed to be transparent and collaborative, ensuring your vision comes to life exactly as you imagined."
-          />
-          <LpChoose transform="transformlp" />
-          <Technologieslp />
-          <Justbuilditlp
-            title={
-              <>
-                <h2 className={stylesjust.just}>Just Build It.</h2>
-              </>
-            }
-            para={
-              <>
-                <h3 className={stylesjust.develop}>
-                  Design, Develop, and Grow with BitsWits.
-                </h3>
-              </>
-            }
-            slide="slide1lp"
-          />
-          <Globallplp6 />
-          <Partnerships />
-          <Formnewlp />
-          <NewFaqslp />
-          <HomeLocationlp />
-        </>
-      )}
-
-      {showComponents && !isMobile && (
+      
+      {isMobile ? (
+        showMobileComponents && (
+          <>
+            <HomeBannerSliderlp />
+            <LpForm6 />
+            <Nothing Nothing="nothingLp6" />
+            <NewMaintain6Lp />
+            <WeworkLp wework="weworkLpnewhomefy" />
+            <StartupsLp startups="startups" />
+            <ProjectProcess
+              processclass="processLp6"
+              title="Explore Our App Development Journey"
+              desc="We believe in efficiency without compromising quality. Our streamlined process for app development is <br /> designed to be transparent and collaborative, ensuring your vision comes to life exactly as you imagined."
+            />
+            <LpChoose transform="transformlp" />
+            <Technologieslp />
+            <Justbuilditlp
+              title={
+                <>
+                  <h2 className={stylesjust.just}>Just Build It.</h2>
+                </>
+              }
+              para={
+                <>
+                  <h3 className={stylesjust.develop}>
+                    Design, Develop, and Grow with BitsWits.
+                  </h3>
+                </>
+              }
+              slide="slide1lp"
+            />
+            <Globallplp6 />
+            <Partnerships />
+            <Formnewlp />
+            <NewFaqslp />
+            <HomeLocationlp />
+          </>
+        )
+      ) : (
         <>
           <HomeBannerSliderlp />
           <LpForm6 />
