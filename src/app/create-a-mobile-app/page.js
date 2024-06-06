@@ -38,7 +38,7 @@ export default function gamedevelopmentcompany() {
     // Show desktop components after 1 second
     const desktopTimer = setTimeout(() => {
       setShowDesktopComponents(true);
-    }, 1000);
+    }, 500);
 
     return () => {
       window.removeEventListener("resize", checkMobile);
