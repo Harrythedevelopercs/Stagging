@@ -23,6 +23,7 @@ import NewFaqslp from "../../components/NewFaqslp";
 import HomeLocationlp from "../../components/HomeLocationlp";
 
 export default function gamedevelopmentcompany() {
+  const [showDesktopComponents, setShowDesktopComponents] = useState(false);
   const [showMobileComponents, setShowMobileComponents] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -34,6 +35,18 @@ export default function gamedevelopmentcompany() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
+    // Show desktop components after 1 second
+    const desktopTimer = setTimeout(() => {
+      setShowDesktopComponents(true);
+    }, 1000);
+
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+      clearTimeout(desktopTimer);
+    };
+  }, []);
+
+  useEffect(() => {
     const handleTouchOrScroll = () => {
       setShowMobileComponents(true);
       // Remove event listeners after mobile components are shown
@@ -46,7 +59,6 @@ export default function gamedevelopmentcompany() {
     window.addEventListener("touchstart", handleTouchOrScroll);
 
     return () => {
-      window.removeEventListener("resize", checkMobile);
       window.removeEventListener("scroll", handleTouchOrScroll);
       window.removeEventListener("touchstart", handleTouchOrScroll);
     };
@@ -108,41 +120,43 @@ export default function gamedevelopmentcompany() {
           </>
         )
       ) : (
-        <>
-          <HomeBannerSliderlp />
-          <LpForm6 />
-          <Nothing Nothing="nothingLp6" />
-          <NewMaintain6Lp />
-          <WeworkLp wework="weworkLpnewhomefy" />
-          <StartupsLp startups="startups" />
-          <ProjectProcess
-            processclass="processLp6"
-            title="Explore Our App Development Journey"
-            desc="We believe in efficiency without compromising quality. Our streamlined process for app development is designed to be transparent and collaborative, ensuring your vision comes to life exactly as you imagined."
-          />
-          <LpChoose transform="transformlp" />
-          <Technologieslp />
-          <Justbuilditlp
-            title={
-              <>
-                <h2 className={stylesjust.just}>Just Build It.</h2>
-              </>
-            }
-            para={
-              <>
-                <h3 className={stylesjust.develop}>
-                  Design, Develop, and Grow with BitsWits.
-                </h3>
-              </>
-            }
-            slide="slide1lp"
-          />
-          <Globallplp6 />
-          <Partnerships />
-          <Formnewlp />
-          <NewFaqslp />
-          <HomeLocationlp />
-        </>
+        showDesktopComponents && (
+          <>
+            <HomeBannerSliderlp />
+            <LpForm6 />
+            <Nothing Nothing="nothingLp6" />
+            <NewMaintain6Lp />
+            <WeworkLp wework="weworkLpnewhomefy" />
+            <StartupsLp startups="startups" />
+            <ProjectProcess
+              processclass="processLp6"
+              title="Explore Our App Development Journey"
+              desc="We believe in efficiency without compromising quality. Our streamlined process for app development is designed to be transparent and collaborative, ensuring your vision comes to life exactly as you imagined."
+            />
+            <LpChoose transform="transformlp" />
+            <Technologieslp />
+            <Justbuilditlp
+              title={
+                <>
+                  <h2 className={stylesjust.just}>Just Build It.</h2>
+                </>
+              }
+              para={
+                <>
+                  <h3 className={stylesjust.develop}>
+                    Design, Develop, and Grow with BitsWits.
+                  </h3>
+                </>
+              }
+              slide="slide1lp"
+            />
+            <Globallplp6 />
+            <Partnerships />
+            <Formnewlp />
+            <NewFaqslp />
+            <HomeLocationlp />
+          </>
+        )
       )}
     </>
   );
