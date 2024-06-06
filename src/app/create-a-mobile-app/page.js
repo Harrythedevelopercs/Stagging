@@ -34,21 +34,11 @@ export default function gamedevelopmentcompany() {
     checkMobile();
     window.addEventListener("resize", checkMobile);
 
-    const handleTouchOrScroll = () => {
-      setShowMobileComponents(true);
-      // Remove event listeners after mobile components are shown
-      window.removeEventListener("scroll", handleTouchOrScroll);
-      window.removeEventListener("touchstart", handleTouchOrScroll);
-    };
-
-    // Add event listeners for touch and scroll events
-    window.addEventListener("scroll", handleTouchOrScroll);
-    window.addEventListener("touchstart", handleTouchOrScroll);
+    // Show mobile components immediately
+    setShowMobileComponents(true);
 
     return () => {
       window.removeEventListener("resize", checkMobile);
-      window.removeEventListener("scroll", handleTouchOrScroll);
-      window.removeEventListener("touchstart", handleTouchOrScroll);
     };
   }, []);
 
@@ -67,12 +57,11 @@ export default function gamedevelopmentcompany() {
         }
         newHomeBgprops="newHomeBg"
       />
-     
+      <People People="people" />
       
       {isMobile ? (
         showMobileComponents && (
           <>
-           <People People="people" />
             <HomeBannerSliderlp />
             <LpForm6 />
             <Nothing Nothing="nothingLp6" />
@@ -110,7 +99,6 @@ export default function gamedevelopmentcompany() {
         )
       ) : (
         <>
-          <People People="people" />
           <HomeBannerSliderlp />
           <LpForm6 />
           <Nothing Nothing="nothingLp6" />
